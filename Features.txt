@@ -1,0 +1,29 @@
+=>Anagram Checking Function (is_anagram):
+ The function takes two input strings, removes spaces, and converts them to lowercase.It checks if the lengths of the two strings are equal. If not, they cannot be anagrams.
+ Creates two dictionaries freq1 and freq2 to store the frequency of each character in the strings.
+ Updates the frequency for each character in both strings.Compares the two dictionaries to check if they are equal. If they are, the strings are anagrams.
+
+=>AWS Lambda Handler (lambda_handler):
+ Gets the input strings str1 and str2 from the event.
+ Calls the is_anagram function with the input strings to check if they are anagrams.Constructs a JSON response indicating whether the strings are anagrams or not.
+
+=>Lambda Function Invocation:
+ The Lambda function is designed to be invoked via an API Gateway request.
+ It expects a JSON payload with keys str1 and str2, representing the input strings.
+ Upon receiving the request, the Lambda function checks if the input strings are anagrams and returns a JSON response with the result.
+
+=>Scalability:
+ AWS Lambda is a serverless computing service, which means it automatically scales to handle the incoming requests.
+ As more requests are made to the Lambda function, AWS automatically provisions the necessary resources to handle the load.
+ 
+=>Cost-Efficient:
+ With AWS Lambda, you pay only for the compute time consumed by your function.
+ Since the function is only invoked when needed, there are no costs for idle resources.
+
+=>Easy Deployment and Management:
+ The Lambda function can be easily deployed and managed through the AWS Management Console, CLI, or SDKs.
+ Updates to the function code can be made quickly and seamlessly.
+ Flexibility:
+
+**The function can be integrated with other AWS services such as API Gateway, S3, DynamoDB, etc., to build more complex applications.
+It can also be used as a part of a larger serverless architecture, where multiple Lambda functions work together to achieve a common goal.
